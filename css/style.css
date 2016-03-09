@@ -24,7 +24,7 @@ body{
   background-color: aqua;
 }
 
-h1 {
+h1,h2 {
   /*background-color: rgb(223, 40, 40);*/
   padding: 1rem;
   margin: 0;
