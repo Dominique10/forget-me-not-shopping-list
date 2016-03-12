@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 	$('.myForm').submit(function(e) {
+		/*Remove instrustions*/
+		$("#instruction").remove();
 		/*Value of textbox into textBox var*/
 		var textBox = $("#item-here").val();
 		$("#item-here").val('');
@@ -18,11 +20,13 @@ $(document).ready(function(){
  //  // including LIs that aren't on the page when it is initially loaded
   // var itemText = $(this).closest('li').clone();
   // $(this).text(itemText+" -Item Collected");
-  if ($(this).closest("li").hasClass("crossed-out")) {
-  	$(this).closest('li').removeClass("crossed-out");
+  if ($(this).closest("li").hasClass("cross")) {
+  	$(this).closest('li').removeClass("cross");
+  	$(this).closest('li').css('color:white');
   }
    else
-   $(this).closest('li').addClass("crossed-out");
+   $(this).closest('li').addClass("cross");
+ 	 $(this).closest('li').css('color:grey');
 	})
 
 	$('ul').on('click', '.deleteMe', function(event){

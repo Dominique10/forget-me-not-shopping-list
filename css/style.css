@@ -24,7 +24,7 @@ body{
   background-color: aqua;
 }
 
-h1,h2 {
+h1,h2,h3 {
   /*background-color: rgb(223, 40, 40);*/
   padding: 1rem;
   margin: 0;
@@ -33,6 +33,9 @@ h1,h2 {
   text-align: center;
   color: white;
   font-family: 'Indie Flower', cursive;
+}
+.item-list{
+	text-align: center;
 }
 .crossed-out{
 	text-decoration:line-through;
@@ -188,6 +191,27 @@ ul {
 	background-color: black;
 }
 
+.cross {
+    position: relative;
+    /*display: inline-block;*/
+}
+.cross::before, .cross::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.cross::before {
+    border-bottom: 2px solid red;
+    -webkit-transform: skewY(3deg);
+    transform: skewY(-3deg);
+}
+.cross::after {
+    border-bottom: 2px solid red;
+    -webkit-transform: skewY(3deg);
+    transform: skewY(3deg);
+}
 
  @media (min-width: 400px){
 	input[type="submit"]{
@@ -201,6 +225,12 @@ ul {
 	input[type="submit"]{
 		width: 12.1rem;
 	}
+	/*ul{
+		padding-left: 26rem;
+	}
+	li{
+		max-width: 42%;
+	}*/
 }
 @media (min-width: 700px){
 	
