@@ -225,6 +225,14 @@ ul {
 	input[type="submit"]{
 		width: 12.1rem;
 	}
+	.cross::before {
+    -webkit-transform: skewY(1deg);
+    transform: skewY(-1deg);
+}
+.cross::after {
+    -webkit-transform: skewY(1deg);
+    transform: skewY(1deg);
+}
 	/*ul{
 		padding-left: 26rem;
 	}
