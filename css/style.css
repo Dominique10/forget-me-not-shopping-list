@@ -134,11 +134,12 @@ li {
 	-webkit-border-radius:6px;
 	border-radius:6px;
 	border:1px solid #84bbf3;
-	/*display:inline-block;*/
+	display:inline-block;
+	width: 20rem;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:15px;
+	font-size:2rem;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
