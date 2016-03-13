@@ -135,7 +135,6 @@ li {
 	border-radius:6px;
 	border:1px solid #84bbf3;
 	display:inline-block;
-	width: 20rem;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:cursive;
@@ -218,11 +217,15 @@ ul {
 	input[type="submit"]{
 		width: 7.3rem;
 	}
+
 }
 @media (min-width: 500px){
 	#item-here {
     width: 15rem;
 }
+li{
+		width: 20rem;
+	}
 	input[type="submit"]{
 		width: 12.1rem;
 	}

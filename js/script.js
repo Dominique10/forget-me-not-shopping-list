@@ -7,7 +7,7 @@ $(document).ready(function(){
 		var textBox = $("#item-here").val();
 		$("#item-here").val('');
 		/*Adds value from textBox and adds to list*/
-		$("ul").append("<li>" + textBox + "<span class='deleteMe'>X</span></li>");
+		$("ul").append("<li><span class='deleteMe'>X</span>" + textBox + "</li>");
 		/* Remove form default*/
 		e.preventDefault();
 	})
