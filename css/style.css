@@ -175,12 +175,32 @@ input[type="text"].focus {
   border: solid 1px #707070;
   box-shadow: 0 0 5px 1px #969696;
 }
-.deleteMe{
+.fa-trash{
 	float:right;
 	color: white;
-	line-height: .6;
 	text-shadow: 2px 2px #000000;
-	margin-left: 8px;
+	margin-left: 1rem;
+	padding-top: .2rem;
+}
+.fa-square-o,.fa-check-square-o{
+	float: left;
+  padding-top: 4px;
+  padding-right: 1rem;
+}
+
+input[type=checkbox] {
+  opacity: 0;
+  float: left;
+  width: 18px;
+}
+
+input[type=checkbox]:checked {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 15px;
 }
 ul {
   margin: 2rem;

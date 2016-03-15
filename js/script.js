@@ -7,31 +7,39 @@ $(document).ready(function(){
 		var textBox = $("#item-here").val();
 		$("#item-here").val('');
 		/*Adds value from textBox and adds to list*/
-		$("ul").append("<li><span class='deleteMe'>X</span>" + textBox + "</li>");
+		$("ul").append("<li><i class='fa fa-square-o'></i><i class='fa fa-trash'></i>" + textBox + "</li>");
 		/* Remove form default*/
 		e.preventDefault();
 	})
 
-	$('.deleteMe').click(function(){
+	// $('.fa-trash').click(function(){
+	// 	$(this).closest('li').remove();
+	// })
+	$('ul').on('click', '.fa-trash', function(event){
 		$(this).closest('li').remove();
+
 	})
-	$('ul').on('click', 'li', function(event){
+	$('ul').on('click', 'i', function(event){
  //  // fires when any LIs are clicked on
  //  // including LIs that aren't on the page when it is initially loaded
   // var itemText = $(this).closest('li').clone();
   // $(this).text(itemText+" -Item Collected");
-  if ($(this).closest("li").hasClass("cross")) {
-  	$(this).closest('li').removeClass("cross");
-  	$(this).closest('li').css('color:white');
-  }
-   else
-   $(this).closest('li').addClass("cross");
- 	 $(this).closest('li').css('color:grey');
-	})
-
-	$('ul').on('click', '.deleteMe', function(event){
-  // fires when any LIs are clicked on
-  // including LIs that aren't on the page when it is initially loaded
-  $(this).closest('li').remove();
+  if ($(this).closest("i").hasClass("fa fa-square-o")) 
+  	{
+  		$(this).closest('i').removeClass("fa fa-square-o");
+  		$(this).closest('i').addClass("fa fa-check-square-o");
+  		$(this).closest('li').css('text-decoration','line-through;');
+  	}
+   else if ($(this).closest("i").hasClass("fa fa-check-square-o"))
+   {
+   		$(this).closest('i').removeClass("fa fa-check-square-o");
+  		$(this).closest('i').addClass("fa fa-square-o");
+  	}
 	});
+
+	// $('ul').on('click', '.deleteMe', function(event){
+ //  // fires when any LIs are clicked on
+ //  // including LIs that aren't on the page when it is initially loaded
+ //  $(this).closest('li').remove();
+	// });
 });
