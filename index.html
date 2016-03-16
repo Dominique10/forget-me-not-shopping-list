@@ -6,33 +6,40 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+
+
 	</head>
 <body>
 	<header>
 		<div class="navbar">
 			<i class="fa fa-shopping-basket fa-5x"></i>
 			<h1>Forget Me Not</h1>
+			<h2>Grocery List</h2>
+			<h3 id="instruction">Click the checkbox to mark as completed, remove the item by clicking the trash can icon. Now add your first item.</h3>
 		</div>
 	</header>
 	<div class="content">
-		<form>
-			<input type="text" id="item-here" placeholder="Add Item Here"></input>
+		<form action="post" class="myForm">
+			<input type="text" id="item-here" placeholder="Add Item Here" required="yes"></input>
 			<br>
 			<input type="submit"value="Submit" id="submit-button"></input>
 		</form>
-		<br>
-		<ul>
-			<li>Milk<span class="deleteMe">X</span></li>
-			<li>Oreo<span class="deleteMe">X</span></li>
-			<li>Pineapple<span class="deleteMe">X</span></li>
-			<li>Grits<span class="deleteMe">X</span></li>
-			<li class="crossed-out">BlackBerries<span class="deleteMe">X</span></li>
-			<li class="crossed-out">BlueBerry<span class="deleteMe">X</span></li>
-		</ul>
+		<div class="item-list">
+			<ul>
+				<li><i class="fa fa-square-o"></i><i class="fa fa-trash"></i>Milk</li>
+				<li><i class="fa fa-square-o"></i><i class="fa fa-trash"></i>Oreo</li>
+				<li><i class="fa fa-square-o"></i><i class="fa fa-trash"></i>Pineapple</li>
+				<li><i class="fa fa-square-o"></i><i class="fa fa-trash"></i>Grits</li>
+				<li><i class="fa fa-square-o"></i><i class="fa fa-trash"></i>BlackBerries</li>
+				<li><i class="fa fa-square-o"></i><i class="fa fa-trash"></i>BlueBerry</li>
+			</ul>
+		</div>
 	</div>
 	<div class="footer">
 		test
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
