@@ -11,19 +11,14 @@ $(document).ready(function(){
 		/* Remove form default*/
 		e.preventDefault();
 	})
-
-	// $('.fa-trash').click(function(){
-	// 	$(this).closest('li').remove();
-	// })
+	/*Removes item when trash can is clicked*/
 	$('ul').on('click', '.fa-trash', function(event){
 		$(this).closest('li').remove();
 
 	})
 	$('ul').on('click', 'i', function(event){
- //  // fires when any LIs are clicked on
- //  // including LIs that aren't on the page when it is initially loaded
-  // var itemText = $(this).closest('li').clone();
-  // $(this).text(itemText+" -Item Collected");
+ //  // fires when any I are clicked on
+ //  // including I that aren't on the page when it is initially loaded
   if ($(this).closest("i").hasClass("fa fa-square-o")) 
   	{
   		$(this).closest('i').removeClass("fa fa-square-o");
@@ -36,10 +31,4 @@ $(document).ready(function(){
   		$(this).closest('i').addClass("fa fa-square-o");
   	}
 	});
-
-	// $('ul').on('click', '.deleteMe', function(event){
- //  // fires when any LIs are clicked on
- //  // including LIs that aren't on the page when it is initially loaded
- //  $(this).closest('li').remove();
-	// });
 });
